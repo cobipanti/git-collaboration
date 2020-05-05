@@ -1,0 +1,10 @@
+Hello! I am Cobi Panti and I am studying Computer Science and I'm interested in developing video games in the future but right now I would want to make a COVID-19 tracker.
+The tracker would mainly contain different helpful graphs such as people infected, treated, and died.
+It will more importantly make far more important graphs such as:
+rate of infections, treated, and deaths
+infections per tests
+infections per population
+deaths per population
+
+Entities will be the data-sets, graphs, and news articles.
+

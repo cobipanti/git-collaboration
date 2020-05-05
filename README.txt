@@ -1,1 +1,0 @@
-This README was created for the purpose of learning git. Specifically about staging and commiting files to the repository.

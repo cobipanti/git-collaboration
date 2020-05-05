@@ -1,0 +1,6 @@
+C:\Users\cobip\store\LearnGit\LearnGit\bin\Debug\LearnGit.exe.config
+C:\Users\cobip\store\LearnGit\LearnGit\bin\Debug\LearnGit.exe
+C:\Users\cobip\store\LearnGit\LearnGit\bin\Debug\LearnGit.pdb
+C:\Users\cobip\store\LearnGit\LearnGit\obj\Debug\LearnGit.csproj.CoreCompileInputs.cache
+C:\Users\cobip\store\LearnGit\LearnGit\obj\Debug\LearnGit.exe
+C:\Users\cobip\store\LearnGit\LearnGit\obj\Debug\LearnGit.pdb

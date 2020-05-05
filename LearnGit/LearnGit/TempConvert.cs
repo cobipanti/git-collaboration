@@ -14,19 +14,24 @@ namespace LearnGit
 
         public TempConvert()
         {
-            Console.WriteLine("Please enter in this syntax 't x' where t is the unit and x is the temperature.\n" +
-                "such as 'c 24' to convert 24 celsius into the other units.");
-
+            Console.WriteLine("Type the letter of the unit you want to use\n" +
+                "[C]elsius, [F]ahrenheit, or [K]elvin\n" +
+                "followed by a space then a number. An example:\n" +
+                "c 24\n" +
+                "to convert 24 degrees celsius.\n" +
+                "Type [q] to go back to the Main menu");
             while (true)
             {
                 string tInput = Console.ReadLine();
+                Console.Clear();
+                Console.WriteLine(tInput);
                 string[] tInputs = tInput.Split(' ');
 
                 if (tInputs.Length == 2)
                 {
-                    int num;
+                    double num;
                     char unit;
-                    bool canConvert1 = int.TryParse(tInputs[1], out num);
+                    bool canConvert1 = double.TryParse(tInputs[1], out num);
                     bool canConvert0 = char.TryParse(tInputs[0], out unit);
 
                     if (canConvert1 && canConvert0)
@@ -69,6 +74,10 @@ namespace LearnGit
                     {
                         break;
                     }
+                    else
+                    {
+                        Console.WriteLine("Invalid input. Please refer to help by typing [h].");
+                    }
                 }
                 else
                 {
@@ -83,8 +92,9 @@ namespace LearnGit
             finalKel = Math.Round((cel + 273.15),3);
             finalCel = Math.Round(cel,3);
 
-            Console.WriteLine("Celsius\t|Fahrenheit\t|Kelvin");
-            Console.WriteLine($"{finalCel}\t|{finalFah}\t\t|{finalKel}");
+            Console.WriteLine($"Celsius\t\t| {finalCel}");
+            Console.WriteLine($"Fahrenheit\t| {finalFah}");
+            Console.WriteLine($"Kelvin\t\t| {finalKel}");
 
         }
 
@@ -94,8 +104,9 @@ namespace LearnGit
             finalKel = Math.Round((finalCel + 273.15),3);
             finalFah = Math.Round(fah);
 
-            Console.WriteLine("Fahrenheit\t|Celsius\t|Kelvin");
-            Console.WriteLine($"{finalFah}\t\t|{finalCel}\t\t|{finalKel}");
+            Console.WriteLine($"Fahrenheit\t| {finalFah}");
+            Console.WriteLine($"Celsius\t\t| {finalCel}");
+            Console.WriteLine($"Kelvin\t\t| {finalKel}"); 
         }
 
         private void fromKelvin(double kel)
@@ -103,8 +114,10 @@ namespace LearnGit
             finalCel = Math.Round((kel-273.15),3);
             finalFah = Math.Round(((finalCel * 9 / 5) + 32),3);
             finalKel = Math.Round(kel,3);
-            Console.WriteLine("Kelvin\t|Fahrenheit\t|Celsius");
-            Console.WriteLine($"{finalKel}\t|{finalFah}\t\t|{finalCel}");
+
+            Console.WriteLine($"Kelvin\t\t| {finalKel}");
+            Console.WriteLine($"Celsius\t\t| {finalCel}");
+            Console.WriteLine($"Fahrenheit\t| {finalFah}");
         }
     }
 }

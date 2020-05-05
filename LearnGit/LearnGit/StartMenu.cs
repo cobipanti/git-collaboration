@@ -10,7 +10,17 @@ namespace LearnGit
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!\n");
+
+            Console.WriteLine("  _    _          _   _            __          __                 _       _ \n" +
+                @" | |  | |        | | | |           \ \        / /                | |     | |" + "\n"+
+                @" | |__| |   ___  | | | |   ___      \ \  /\  / /    ___    _ __  | |   __| |" + "\n" +
+                @" |  __  |  / _ \ | | | |  / _ \      \ \/  \/ /    / _ \  | '__| | |  / _` |" + "\n" +
+                @" | |  | | |  __/ | | | | | (_) |      \  /\  /    | (_) | | |    | | | (_| |" + "\n" +
+                @" |_|  |_|  \___| |_| |_|  \___/        \/  \/      \___/  |_|    |_|  \__,_|");
+
+            Console.WriteLine("Learning Git Homework by Cobi Panti\n" +
+                "Features include: Simple [C]alculator, [T]emperature Converter, and [P]rime Number Checker.\n" +
+                "Type in [h] for help and [q] to quit.");
 
             new StartMenu();
         }
@@ -28,7 +38,7 @@ namespace LearnGit
                 if (order == "h" || order == "help")
                 {
                     Console.WriteLine("Enter the letter within the brackets [] to enter a command\n" +
-                        "[H]elp\n[Q]uit\n[P]rime Number Checker\nTemperature [C]onverter");
+                        "[H]elp\n[Q]uit\nSimple [C]alculator\n[P]rime Number Checker\n[T]emperature Converter");
                 }
                 else if (order == "q")
                 {
@@ -37,16 +47,21 @@ namespace LearnGit
                 else if (order == "p")
                 {
                     new PrimeChecker();
-                    Console.WriteLine("Welcome back to the Main Menu. Enter h for help\n");
+                    Console.WriteLine("Welcome back to the Main Menu. Enter [h] for help\n");
+                }
+                else if (order == "t")
+                {
+                    new TempConvert();
+                    Console.WriteLine("Welcome back to the Main Menu. Enter [h] for help\n");
                 }
                 else if (order == "c")
                 {
-                    new TempConvert();
-                    Console.WriteLine("Welcome back to the Main Menu. Enter h for help\n");
+                    new SimpleCalculator();
+                    Console.WriteLine("Welcome back to the Main Menu. Enter [h] for help\n");
                 }
                 else
                 {
-                    Console.WriteLine("Invalid input. Please type in 'h' or 'help' for help");
+                    Console.WriteLine("Invalid input. Please type in [h] for help");
                 }
             }
         }

@@ -36,6 +36,11 @@ namespace LearnGit
                         }
                     }
 
+                    if(num == 0 || num == 1)
+                    {
+                        isPrime = false;
+                    }
+
                     if (isPrime)
                     {
                         Console.WriteLine($"{num} is a prime number.\n");
@@ -45,13 +50,17 @@ namespace LearnGit
                         Console.WriteLine($"{num} is NOT a prime number.\n");
                     }
                 }
-
                 else
                 {
                     string pOrder = pInput.ToLower();
-                    if(pOrder == "q" || pOrder == "quit")
+                    if(pOrder == "q")
                     {
                         break;
+                    }
+                    else if(pOrder == "h")
+                    {
+                        Console.WriteLine("Enter any integer to check if it is a prime number or not.\n" +
+                            "press [q] to quit to main menu.");
                     }
                     else
                     {

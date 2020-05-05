@@ -20,21 +20,29 @@ namespace LearnGit
             while (true)
             {
                 string input = Console.ReadLine();
-                Console.WriteLine();
+                Console.Clear();
+                //Console.WriteLine(input);
+
                 string order = input.ToLower();
 
                 if (order == "h" || order == "help")
                 {
-                    Console.WriteLine("help\n");
+                    Console.WriteLine("Enter the letter within the brackets [] to enter a command\n" +
+                        "[H]elp\n[Q]uit\n[P]rime Number Checker\nTemperature [C]onverter");
                 }
-                else if (order == "q" || order == "quit")
+                else if (order == "q")
                 {
                     break;
                 }
-                else if (order == "p" || order == "prime")
+                else if (order == "p")
                 {
                     new PrimeChecker();
-                    Console.WriteLine("Welcome back to the Main Menu.");
+                    Console.WriteLine("Welcome back to the Main Menu. Enter h for help\n");
+                }
+                else if (order == "c")
+                {
+                    new TempConvert();
+                    Console.WriteLine("Welcome back to the Main Menu. Enter h for help\n");
                 }
                 else
                 {

@@ -17,6 +17,8 @@ namespace LearnGit
             {
 
                 string pInput = Console.ReadLine();
+                Console.Clear();
+                //Console.WriteLine(pInput);
 
                 int num;
                 bool canConvert = int.TryParse(pInput, out num);

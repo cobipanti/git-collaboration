@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="TempConvert.cs" />
     <Compile Include="PrimeChecker.cs" />
     <Compile Include="StartMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
